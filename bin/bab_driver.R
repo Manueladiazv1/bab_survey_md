@@ -1,6 +1,6 @@
 # Equity in Ocean Access (Benefits and Barriers – bab)
 # Manuela Diaz
-# California Marine Sanctuary Foundation/ CINMS
+## California Marine Sanctuary Foundation/ CINMS
 # Driver de análisis - Manuela (enfoque especies valoradas)
 # Basado en bab_driver.R de Jenny
 
@@ -84,31 +84,24 @@ source("./bin/bab_clean_data_remove_headers.R")
 # input:           ./results/data_long9.csv
 # output:          ./results/data_long_clean.csv   # <-- master tidy file
 
-
-
-
-
 #----------------------------------------------------------
 # ----------------------------------------------------------
 # 2. Load clean data - cargar data larga limpia para trabajar #### -----------
 #    Ésta es tu “data master” para análisis
 
-bab_long <- readr::read_csv("./results/data_long_clean.csv",
-                            show_col_types = FALSE)
-
+#bab_long <- readr::read_csv("./results/data_long_clean.csv",
+#                            show_col_types = FALSE)
 # Chequeo rápido
-glimpse(bab_long)
+#glimpse(bab_long)
 
 # ----------------------------------------------------------
-# 4. ANÁLISIS DE ESPECIES VALORADAS (Q12) #### -------------
+# 4. ANALYSIS / ANÁLISIS DE ESPECIES VALORADAS (Q14_4 / Q14_5) #### -------------
 
-# 4.1. Limpieza y categorización de especies (Q12)
-#     - agrupar sinónimos (ej: “blue whale”, “gray whale” -> “whales”)
-#     - separar múltiples especies en una respuesta
-#     - crear categorías (mamíferos marinos, aves marinas, peces, invertebrados, etc.)
-# Este script debería leer bab_long, crear variables nuevas y guardar:
-#   ./results/valued_species_data_long.csv  (por ejemplo)
-# source("./bin/bab_q12_species_clean.R")
+# 4.1. Limpieza y categorización de especies (Q14_4 / Q14_5)
+source("./bin/bab_clean_species_q14_4_q14_5.R")
+# outputs:
+#   ./results/q14_species_long.csv
+#   ./results/q14_species_unmatched.csv
 
 # 4.2. Resúmenes y gráficos básicos
 #     - top N especies valoradas (global)

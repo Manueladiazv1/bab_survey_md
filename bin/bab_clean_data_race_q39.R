@@ -2,7 +2,7 @@
 # Manuela Diaz – 2025
 # California Marine Sanctuary Foundation/ CINMS
 
-# goal: clean race data Q39 and Q39_TEXT (other race or ethnicity) for long data
+## goal: clean race data Q39 and Q39_TEXT (other race or ethnicity) for long data
 # source: bab_clean_data_race_q39.R
 
 # ----------------------------------------------------------

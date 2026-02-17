@@ -34,7 +34,7 @@ d1$Q43 <- gsub("Female,Choose not to answer", "Female", d1$Q43)
 # Male + Choose not to answer -> Male
 d1$Q43 <- gsub("Male,Choose not to answer", "Male", d1$Q43)
 
-# Trans / non-binary + Choose not to answer -> Trans / non-binary
+## Trans / non-binary + Choose not to answer -> Trans / non-binary
 d1$Q43 <- gsub(
   "Transgender, non-binary, or another gender,Choose not to answer",
   "Transgender, non-binary, or another gender",

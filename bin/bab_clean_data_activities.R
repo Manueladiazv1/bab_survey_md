@@ -1,6 +1,6 @@
 # Equity in Ocean Access (Benefits and Barriers (bab))
 # Manuela Diaz based on Jennifer Selgrath code 
-# California Marine Sanctuary Foundation/ CINMS
+## California Marine Sanctuary Foundation/ CINMS
 
 # goal: clean activity data Q4 & Q5 for long data
 

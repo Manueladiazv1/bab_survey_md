@@ -29,6 +29,20 @@ d1 <- d0
 unique(d1$Q31)
 
 # ----------------------------------------------------------
+# ADD FLAG COLUMN: record who selected "I'm not sure"
+# (do this BEFORE cleaning/removal so you keep a record)
+# ----------------------------------------------------------
+d1 <- d1 %>%
+  mutate(
+    Q31_not_sure_flag = if_else(
+      str_detect(Q31, regex("I.?m not sure", ignore_case = TRUE)),
+      1,
+      0,
+      missing = 0
+    )
+  )
+
+# ----------------------------------------------------------
 # Minimal cleanup (same spirit as Jenny)
 # ----------------------------------------------------------
 d1$Q31 <- str_squish(d1$Q31)
@@ -80,7 +94,7 @@ d1$Q31 <- gsub(
   d1$Q31
 )
 
-# ----------------------------------------------------------
+## ----------------------------------------------------------
 # Tidy commas and whitespace after replacements
 # ----------------------------------------------------------
 d1$Q31 <- gsub(",+", ",", d1$Q31)   # collapse double commas

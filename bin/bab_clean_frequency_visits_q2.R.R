@@ -28,7 +28,7 @@ d1 <- d0
 unique(d1$Q2)
 
 
-# Optional but OK to keep (minimal hygiene)
+## Optional but OK to keep (minimal hygiene)
 d1$Q2 <- str_squish(d1$Q2)
 
 unique(d1$Q2)

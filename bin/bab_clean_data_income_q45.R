@@ -99,7 +99,7 @@ unique(d1$Q45)
 # Convert empty strings to NA
 d1$Q45[d1$Q45 == ""] <- NA
 
-# ----------------------------------------------------------
+## ----------------------------------------------------------
 # 7. Validate final values
 # ----------------------------------------------------------
 # Identify any values that do not match expected categories

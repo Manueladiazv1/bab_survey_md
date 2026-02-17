@@ -158,7 +158,7 @@ d3 <- d2 %>%
 
 questions2 <- colnames(d3)
 
-## transpose Data so that each column is a survey response and each row is a prompt
+### transpose Data so that each column is a survey response and each row is a prompt
 d4 <- as.data.frame(t(d3)) %>%
   mutate(questions = V1) %>%
   glimpse()
